@@ -244,6 +244,10 @@ p {
   font-family: "Poppins", sans-serif;
   font-size: 0.8rem;
   line-height: 1.6;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 p.nav {
   font-weight: bold;
@@ -263,12 +267,20 @@ p.aboutText {
 h1, h2, h3, h4 {
   font-family: "Poppins", sans-serif;
   margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 ul, li, a, p {
   padding: 0;
   margin: 0;
   display: inline-block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 h2 {
@@ -332,7 +344,7 @@ body {
 }
 
 .wrapper {
-  max-width: 2400px;
+  max-width: 1600px;
   width: 80%;
   margin: 0 auto;
 }
@@ -461,6 +473,16 @@ html {
 }
 .projects .projectBox .projectTextContainer .links {
   margin-top: 10px;
+}
+.projects .projectBox .projectTextContainer .links .projectLink {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.projects .projectBox .projectTextContainer .links .projectLink:hover {
+  background-color: #f8f9fa;
+  color: #255ea6;
+  -webkit-box-shadow: 0 0 0 2px #255ea6 inset;
+          box-shadow: 0 0 0 2px #255ea6 inset;
 }
 
 .skills {
@@ -617,6 +639,15 @@ html {
   width: calc(50% - 20px);
   margin-right: 20px;
 }
+.contact .wrapper .contactSection .leftSection #email {
+  -webkit-transition: color 0.25s ease-in;
+  transition: color 0.25s ease-in;
+  padding-bottom: 5px;
+}
+.contact .wrapper .contactSection .leftSection #email:hover {
+  color: #ffff;
+  border-bottom: solid 2px #ffff;
+}
 .contact .wrapper .contactSection .leftSection .socialIcons i {
   position: relative;
 }
@@ -688,6 +719,10 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.commentInputs {
+  width: 100%;
 }
 
 input, textarea {
