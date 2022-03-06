@@ -305,10 +305,6 @@ p {
   font-family: "Poppins", sans-serif;
   font-size: 0.8rem;
   line-height: 1.6;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 p.nav {
   font-weight: bold;
@@ -322,20 +318,12 @@ p.aboutText {
 h1, h2, h3, h4 {
   font-family: "Poppins", sans-serif;
   margin: 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 ul, li, a, p {
   padding: 0;
   margin: 0;
   display: inline-block;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 h2 {
@@ -365,6 +353,12 @@ i.social {
 }
 i.projectIcon {
   font-size: 1.5rem;
+}
+i.fa-sass {
+  font-size: 1.15rem;
+}
+i.fa-cloud {
+  font-size: 1.15rem;
 }
 
 ul {
@@ -462,9 +456,8 @@ body {
 
 .sideNav {
   position: fixed;
-  top: 100px;
   z-index: 100;
-  top: calc(50vh - 20px);
+  top: calc(50vh + 20px);
   right: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -473,14 +466,16 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 .sideNav button {
   background-color: transparent;
   border: transparent;
-  margin-bottom: 20px;
+  position: absolute;
+  right: 0px;
+  top: -40px;
 }
 .sideNav button:hover {
   cursor: pointer;
@@ -491,6 +486,10 @@ body {
   height: 20px;
   width: 20px;
 }
+.sideNav button img.flip {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
 .sideNav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -499,16 +498,30 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
+  right: -70px;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+.sideNav ul.slideUl {
+  right: 0px;
 }
 .sideNav ul a {
   height: 10px;
   width: 10px;
   border-radius: 50%;
   background-color: #797979;
+  margin-right: 10px;
 }
 .sideNav ul p {
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
   color: #797979;
-  display: none;
+  opacity: 1;
+}
+.sideNav ul p.slideOut {
+  visibility: hidden;
+  opacity: 0;
 }
 
 header {
@@ -609,7 +622,7 @@ html {
   display: flex;
   -webkit-box-shadow: 5px 5px 15px 5px rgba(46, 46, 46, 0.26);
           box-shadow: 5px 5px 15px 5px rgba(46, 46, 46, 0.26);
-  margin: 20px 0;
+  margin: 40px 0;
 }
 .projects .projectBox .projectImgContainer {
   width: 40%;
@@ -633,7 +646,6 @@ html {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  max-width: 500px;
 }
 .projects .projectBox .projectTextContainer .skillsAndLinks .usedSkills {
   width: 67%;
@@ -747,11 +759,12 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 .skills .wrapper .skillsContainer .eachSkill i {
   font-size: 50px;
   color: white;
-  margin: 40px 0 15px 0;
+  margin: 40px 0 25px 0;
   position: relative;
   z-index: 10;
   -webkit-transition: all 0.25s ease-in;
@@ -763,7 +776,9 @@ html {
 }
 .skills .wrapper .skillsContainer .eachSkill i:hover + span {
   color: #255ea6;
-  top: 0px;
+  visibility: visible;
+  top: 104px;
+  opacity: 1;
 }
 .skills .wrapper .skillsContainer .eachSkill i:after {
   position: absolute;
@@ -786,11 +801,13 @@ html {
           box-shadow: 0px 0px 5px 1px rgba(70, 70, 70, 0.26);
 }
 .skills .wrapper .skillsContainer .eachSkill .iconName {
-  color: transparent;
+  color: #255ea6;
+  visibility: hidden;
+  opacity: 0;
   -webkit-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in;
-  position: relative;
-  top: -40px;
+  position: absolute;
+  top: 90px;
 }
 
 .aboutMe .wrapper {
