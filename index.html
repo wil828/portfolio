@@ -8,16 +8,17 @@
     <title>William Wong Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
     <script src="https://kit.fontawesome.com/3e952ebba1.js" crossorigin="anonymous"></script>
+    <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
 
 
 </head>
 <body>
-    <header>
-        <!-- Navigation -->
-        <nav>
+    <header id="home">
+        <!-- Navigation for Top Bar -->
+        <nav class="topNav">
             <!-- Wrapper -->
             <div class="wrapper">
-                <p class="nav">WILLIAM</p>
+                <p class="nav light">WILLIAM</p>
                 <div class="contactInfo">
                     <div class="phoneNumber">
                         <i class="fa-solid fa-phone-flip light" aria-hidden="true"></i>
@@ -46,14 +47,47 @@
                 </ul>
             </div>
         </nav>
-        <!-- Nav Ends -->
+        <!-- Nav for Top Ends -->
+
+        <!-- Side Nav starts -->
+        <nav class="sideNav" aria-hidden="true">
+            <!-- <div class="sideBar"> -->
+                <button class="slideOutSideNav">
+                    <img src="./assets/NavArrow.png" alt="Navigation Arrow">
+                </button>
+                <ul>
+                    <li>
+                        <a href="#home" title="Home"></a>
+                        <p>Home</p>
+                    </li>
+                    <li>
+                        <a href="#projects" title="Projects"></a>
+                        <p>Projects</p>
+                    </li>
+                    <li>
+                        <a href="#skills" title="Skills"></a>
+                        <p>Skills</p>
+                    </li>
+                    <li>
+                        <a href="#about" title="About"></a>
+                        <p>About</p>
+                    </li>
+                    <li>
+                        <a href="#contact" title="Contact"></a>
+                        <p>Contact</p>
+                    </li>
+                </ul>
+            <!-- </div> -->
+        </nav>
 
         <div class="headerContent">
-            <img src="" alt="">
+            <img src="./assets/BlueprintName.png" alt="">
         </div>
 
         <a href="#projects" class="scrollDown">
-            <i class="fa-solid fa-angle-down light"></i>
+            <img class="arrow" src="./assets/DownArrow.png" alt="arrow">
+            <img class="arrow" src="./assets/DownArrow.png" alt="arrow">
+            <img class="arrow" src="./assets/DownArrow.png" alt="arrow">
         </a>
 
     </header>
@@ -63,8 +97,8 @@
     <main>
         <!-- Project Section Starts -->
         <section class="projects wrapper" id="projects">
-            <p class="intro">Portfolio</p>
-            <h2>Some of my Projects</h2>
+            <!-- <p class="intro">Portfolio</p> -->
+            <h2>Projects</h2>
             <!-- First Project -->
             <div class="projectOne projectBox">
                 <div class="projectImgContainer">
@@ -73,16 +107,46 @@
                 <div class="projectTextContainer">
                     <h3>PokemonXWordle</h3>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam unde, rem reprehenderit excepturi voluptatum perferendis consectetur dignissimos quasi sapiente saepe.</p>
-                    <ul class="usedSkills">
-                        <li>Javascript</li>
-                        <li>REST API</li>
-                        <li>CSS3</li>
-                        <li>Sass</li>
-                        <li>HTML5</li>
-                    </ul>
-                    <div class="links">
-                        <a class="projectLink" href="">View Live</a>
-                        <a class="projectLink" href="">View Code</a>
+                    <div class="skillsAndLinks">
+                        <ul class="usedSkills">
+                            <li>
+                                <div class="projectSkills">
+                                    <i class="fa-brands fa-js projectIcon" aria-hidden="true"></i>
+                                    <p class="projectSkill">Javascript</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="projectSkills">
+                                    <i class="fa-solid fa-cloud projectIcon" aria-hidden="true"></i>
+                                    <p class="projectSkill">Rest API</p>
+                                    <span class="sr-only">Rest A.P.I</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="projectSkills">
+                                    <i class="fa-brands fa-css3-alt projectIcon" aria-hidden="true"></i>
+                                    <p class="projectSkill">CSS3</p>
+                                    <span class="sr-only">C.S.S 3</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="projectSkills">
+                                    <i class="fa-brands fa-sass projectIcon" aria-hidden="true"></i>
+                                    <p class="projectSkill">Sass</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="projectSkills">
+                                    <i class="fa-brands fa-html5 projectIcon" aria-hidden="true"></i>
+                                    <p class="projectSkill"> HTML5</p>
+                                    <span class="sr-only">H.T.M.L 5</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="links">
+                            <a class="projectLink" href="">View Live</a>
+                            <a class="projectLink" href="">View Code</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -90,21 +154,52 @@
             <!-- Second Project -->
             <div class="projectTwo projectBox">
                 <div class="projectImgContainer">
-                    <img src="" alt="">
+                    <img src="./assets/pokemonxwordle.PNG" alt="">
                 </div>
                 <div class="projectTextContainer">
                     <h3>PokemonXWordle</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam unde, rem reprehenderit excepturi voluptatum perferendis consectetur dignissimos quasi sapiente saepe. https://www.alvinwchou.com/</p>
-                    <ul class="usedSkills">
-                        <li>Javascript</li>
-                        <li>REST API</li>
-                        <li>CSS3</li>
-                        <li>Sass</li>
-                        <li>HTML5</li>
-                    </ul>
-                    <div class="links">
-                        <a class="projectLink" href="">View Live</a>
-                        <a class="projectLink" href="">View Code</a>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam unde, rem reprehenderit excepturi voluptatum
+                        perferendis consectetur dignissimos quasi sapiente saepe.</p>
+                    <div class="skillsAndLinks">
+                        <ul class="usedSkills">
+                            <li>
+                                <div class="projectSkills">
+                                    <i class="fa-brands fa-js projectIcon" aria-hidden="true"></i>
+                                    <p class="projectSkill">Javascript</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="projectSkills">
+                                    <i class="fa-solid fa-cloud projectIcon" aria-hidden="true"></i>
+                                    <p class="projectSkill">Rest API</p>
+                                    <span class="sr-only">Rest A.P.I</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="projectSkills">
+                                    <i class="fa-brands fa-css3-alt projectIcon" aria-hidden="true"></i>
+                                    <p class="projectSkill">CSS3</p>
+                                    <span class="sr-only">C.S.S 3</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="projectSkills">
+                                    <i class="fa-brands fa-sass projectIcon" aria-hidden="true"></i>
+                                    <p class="projectSkill">Sass</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="projectSkills">
+                                    <i class="fa-brands fa-html5 projectIcon" aria-hidden="true"></i>
+                                    <p class="projectSkill"> HTML5</p>
+                                    <span class="sr-only">H.T.M.L 5</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="links">
+                            <a class="projectLink" href="">View Live</a>
+                            <a class="projectLink" href="">View Code</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -114,7 +209,7 @@
         <!-- Skills Section Begins -->
         <section class="skills" id="skills">
             <div class="wrapper">
-                <p class="intro">Tools</p>
+                <!-- <p class="intro">Tools</p> -->
                 <h2>Tools & Skills</h2>
                 <div class="skillsContainer">
                     <div class="eachSkill">
@@ -164,6 +259,10 @@
                         <i class="fa-solid fa-user" aria-hidden="true"></i>
                         <span class="iconName">Accessibility</span>
                     </div>
+                    <div class="eachSkill">
+                        <i class="devicon-matlab-plain" aria-hidden="true"></i>
+                        <span class="iconName">MatLab</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -172,11 +271,10 @@
         <!-- About Me Section Starts -->
         <section class="aboutMe" id="about">
             <div class="wrapper">
-                <p class="intro">About Me</p>
                 <h2>Get to Know Me</h2>
                 <div class="aboutContainer">
                     <div class="txtContainer">
-                        <h4>Hi, I'm <span>William Wong</span></h4>
+                        <h4>Hi, I'm <span class="typer" data-delay="150" data-words="William Wong,a Web Developer" data-colors="black"></span></h4>
                         <p class="aboutText">I am a Front-end Developer, I combine my logical problem solving ability given from my previous work experiences,
                         and my attention to detail to help build user-friendly, and accessible digital products. Being a curious, adaptive, and
                         self-motivated person I strive to learn and improve everyday in this vast and fast-growing tech field.</p>
