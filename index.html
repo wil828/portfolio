@@ -25,63 +25,144 @@
                         <span class="sr-only">Phone Number</span>
                         <p class="light">(647) 864 0967</p>
                     </div>
-                    <i class="fa-solid fa-bars light"></i>
+                    <div class="menuButton">
+                        <div class="hamburgerButton"></div>
+                    </div>
                 </div>
                 <!-- navigation links -->
-                <ul class="slideNavigation">
-                    <li>
-                        <a href="#home">Home</a>
-                    </li>
-                    <li>
-                        <a href="#projects">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#skills">Skills</a>
-                    </li>
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
+                <div class="slideOutNav">
+                    
+                    <ul class="slideNavigation">
+                        <li>
+                            <a href="#home" class="slideNav">Home</a>
+                        </li>
+                        <li>
+                            <a href="#projects" class="slideNav">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#skills" class="slideNav">Skills</a>
+                        </li>
+                        <li>
+                            <a href="#about" class="slideNav">About</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="slideNav">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="navIcons">
+                        <a href="" title="Follow for follow?">
+                            <i class="fa-brands fa-instagram social"></i>
+                            <span class="sr-only">Link to Instagram</span>
+                        </a>
+                        <a href="" title="Connect on LinkedIn">
+                            <i class="fa-brands fa-linkedin social" aria-hidden="true"></i>
+                            <span class="sr-only">Link to LinkedIn</span>
+                        </a>
+                        <a href="" title="Come check out my codes!">
+                            <i class="fa-brands fa-github social" aria-hidden="true"></i>
+                            <span class="sr-only">Link to Github</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </nav>
         <!-- Nav for Top Ends -->
 
         <!-- Side Nav starts -->
         <nav class="sideNav" aria-hidden="true">
-            <!-- <div class="sideBar"> -->
-                <button class="slideOutSideNav">
-                    <img src="./assets/NavArrow.png" class="slideOutSideNavImg" alt="Navigation Arrow">
-                </button>
-                <ul class = "showSlide">
-                    <li>
-                        <a href="#home" title="Home"></a>
-                        <p class="sideNavP slideOut">Home</p>
-                    </li>
-                    <li>
-                        <a href="#projects" title="Projects"></a>
-                        <p class="sideNavP slideOut">Projects</p>
-                    </li>
-                    <li>
-                        <a href="#skills" title="Skills"></a>
-                        <p class="sideNavP slideOut">Skills</p>
-                    </li>
-                    <li>
-                        <a href="#about" title="About"></a>
-                        <p class="sideNavP slideOut">About</p>
-                    </li>
-                    <li>
-                        <a href="#contact" title="Contact"></a>
-                        <p class="sideNavP slideOut">Contact</p>
-                    </li>
-                </ul>
-            <!-- </div> -->
+            <button class="slideOutSideNav move-arrow-left">
+                <img src="./assets/NavArrow.png" class="slideOutSideNavImg" alt="Navigation Arrow">
+            </button>
+            <ul class = "showSlide">
+                <li>
+                    <a href="#home" title="Home"></a>
+                    <p class="sideNavP slideOut">Home</p>
+                </li>
+                <li>
+                    <a href="#projects" title="Projects"></a>
+                    <p class="sideNavP slideOut">Projects</p>
+                </li>
+                <li>
+                    <a href="#skills" title="Skills"></a>
+                    <p class="sideNavP slideOut">Skills</p>
+                </li>
+                <li>
+                    <a href="#about" title="About"></a>
+                    <p class="sideNavP slideOut">About</p>
+                </li>
+                <li>
+                    <a href="#contact" title="Contact"></a>
+                    <p class="sideNavP slideOut">Contact</p>
+                </li>
+            </ul>
         </nav>
 
         <div class="headerContent">
             <img src="./assets/BlueprintName.png" alt="">
+            <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 1920 3840" style="enable-background:new 0 0 1920 3840;" xml:space="preserve" class="svgArea">
+                <style type="text/css">
+                    .st0 {
+                        fill: none;
+                    }
+            
+                    .st1 {
+                        fill: none;
+                        stroke: #FFFFFF;
+                        stroke-width: 5;
+                        stroke-linejoin: round;
+                        stroke-miterlimit: 10;
+                    }
+                </style>
+                <g id="Layer_1">
+                </g>
+                <g id="Name">
+                    <g id="XMLID_2_">
+                        <rect id="XMLID_19_" x="191" y="1650" class="st0" width="1618" height="270" />
+                        <path id="XMLID_4_" class="st1" d="M241.5,1829l-47.5-179h24.3l27.2,117.3c2.9,12.3,5.5,24.5,7.6,36.6c4.6-19.1,7.2-30.2,8.1-33.1
+                                l34.1-120.8h28.6l25.6,90.6c6.4,22.5,11.1,43.6,13.9,63.4c2.3-11.3,5.2-24.3,8.9-38.9l28.1-115h23.8l-49.1,179h-22.8l-37.7-136.4
+                                c-3.2-11.4-5-18.4-5.6-21c-1.9,8.2-3.6,15.2-5.2,21l-38,136.4H241.5z" />
+                        <path id="XMLID_6_" class="st1" d="M456.5,1829v-179h23.7v179H456.5z" />
+                        <path id="XMLID_8_" class="st1" d="M527.2,1829v-179h23.7v157.8H639v21.1H527.2z" />
+                        <path id="XMLID_10_" class="st1" d="M672.5,1829v-179h23.7v157.8h88.1v21.1H672.5z" />
+                        <path id="XMLID_12_" class="st1" d="M822.8,1829v-179h23.7v179H822.8z" />
+                        <path id="XMLID_14_" class="st1" d="M874.8,1829l68.7-179h25.5l73.2,179h-27l-20.9-54.2h-74.8L900,1829H874.8z M926.5,1755.5h60.7
+                                l-18.7-49.6c-5.7-15.1-9.9-27.4-12.7-37.1c-2.3,11.5-5.5,22.9-9.6,34.2L926.5,1755.5z" />
+                        <path id="XMLID_17_" class="st1" d="M1066.8,1829v-179h35.6l42.4,126.7c3.9,11.8,6.8,20.6,8.5,26.5c2-6.5,5.2-16.1,9.5-28.7
+                                l42.8-124.5h31.9v179h-22.8v-149.8l-52,149.8h-21.4l-51.8-152.3V1829H1066.8z" />
+                    </g>
+                    <g id="XMLID_1_">
+                    </g>
+                    <g id="XMLID_3_">
+                    </g>
+                    <g id="XMLID_20_">
+                    </g>
+                    <g id="XMLID_21_">
+                    </g>
+                    <g id="XMLID_22_">
+                    </g>
+                    <g id="XMLID_23_">
+                    </g>
+                    <g id="XMLID_24_">
+                    </g>
+                    <g id="XMLID_25_">
+                    </g>
+                    <g id="XMLID_26_">
+                    </g>
+                    <g id="XMLID_27_">
+                    </g>
+                    <g id="XMLID_28_">
+                    </g>
+                    <g id="XMLID_29_">
+                    </g>
+                    <g id="XMLID_30_">
+                    </g>
+                    <g id="XMLID_31_">
+                    </g>
+                    <g id="XMLID_32_">
+                    </g>
+                </g>
+            </svg> -->
         </div>
 
         <a href="#projects" class="scrollDown">

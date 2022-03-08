@@ -288,6 +288,67 @@ html {
             transform: translatex(-10px) scale(1.2);
   }
 }
+.move-arrow-left:hover {
+  -webkit-animation: move-arrow-left 0.5s linear infinite;
+          animation: move-arrow-left 0.5s linear infinite;
+}
+
+@-webkit-keyframes move-arrow-right {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translatex(10px) scale(1.2);
+            transform: translatex(10px) scale(1.2);
+  }
+}
+
+@keyframes move-arrow-right {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translatex(10px) scale(1.2);
+            transform: translatex(10px) scale(1.2);
+  }
+}
+.move-arrow-right:hover {
+  -webkit-animation: move-arrow-right 0.5s linear infinite;
+          animation: move-arrow-right 0.5s linear infinite;
+}
+
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+.slide-in-bottom {
+  -webkit-animation: slide-in-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: slide-in-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
 html {
   font-size: 125%;
 }
@@ -360,6 +421,27 @@ i.fa-sass {
 i.fa-cloud {
   font-size: 1.15rem;
 }
+i.fa-instagram {
+  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+}
+i.fa-instagram:hover {
+  color: #ce39db;
+}
+i.fa-linkedin {
+  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+}
+i.fa-linkedin:hover {
+  color: #0e76a8;
+}
+i.fa-github {
+  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+}
+i.fa-github:hover {
+  color: #0F0F0F;
+}
 
 ul {
   font-size: 0.8rem;
@@ -388,6 +470,11 @@ a#email {
   padding-top: 40px;
   font-size: 1rem;
   color: #8cc6ec;
+}
+a.slideNav {
+  padding-top: 20px;
+  font-size: 1rem;
+  color: #ffff;
 }
 
 body {
@@ -433,9 +520,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.topNav .wrapper .contactInfo .fa-bars {
-  padding-left: 20px;
-}
 .topNav .wrapper .contactInfo .phoneNumber {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -447,17 +531,153 @@ body {
 .topNav .wrapper .contactInfo .phoneNumber p {
   padding-left: 10px;
 }
+.topNav .wrapper .contactInfo .menuButton {
+  margin-left: 20px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 3000;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.topNav .wrapper .contactInfo .menuButton .hamburgerButton {
+  width: 30px;
+  height: 2px;
+  background-color: #ffff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.topNav .wrapper .contactInfo .menuButton .hamburgerButton:before, .topNav .wrapper .contactInfo .menuButton .hamburgerButton:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #ffff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.topNav .wrapper .contactInfo .menuButton .hamburgerButton:before {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+.topNav .wrapper .contactInfo .menuButton .hamburgerButton:after {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
 
-.slideNavigation {
-  z-index: 20;
+.menuButton.open .hamburgerButton {
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+  background-color: transparent !important;
+}
+
+.menuButton.open .hamburgerButton:before {
+  -webkit-transform: rotate(45deg) translate(35px, -35px) !important;
+          transform: rotate(45deg) translate(35px, -35px) !important;
+}
+
+.menuButton.open .hamburgerButton:after {
+  -webkit-transform: rotate(-45deg) translate(35px, 35px) !important;
+          transform: rotate(-45deg) translate(35px, 35px) !important;
+}
+
+.appear {
+  visibility: visible !important;
+  opacity: 0.95 !important;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.navAnimation {
+  -webkit-animation: slide-in-bottom 1s;
+          animation: slide-in-bottom 1s;
+}
+
+.slideOutNav {
+  width: 100%;
+  height: 100vh;
   position: fixed;
-  left: -506px;
+  left: 0;
+  background-color: #255ea6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+}
+.slideOutNav .slideNavigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.slideOutNav .slideNavigation .slideNav:hover {
+  color: #8cc6ec;
+}
+.slideOutNav .navIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+.slideOutNav .navIcons i {
+  position: relative;
+  margin: 0 10px;
+}
+.slideOutNav .navIcons i:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+.slideOutNav .navIcons i:after {
+  position: absolute;
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-radius: 50%;
+  content: "";
+  z-index: -1;
+  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+}
+.slideOutNav .navIcons i:hover:after {
+  -webkit-transform: scale(3);
+          transform: scale(3);
+  background-color: #ffff;
 }
 
 .sideNav {
   position: fixed;
-  z-index: 100;
-  top: calc(50vh + 20px);
+  z-index: 10;
+  top: calc(50vh - 20px);
   right: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -479,8 +699,6 @@ body {
 }
 .sideNav button:hover {
   cursor: pointer;
-  -webkit-animation: move-arrow-left 0.5s linear infinite;
-          animation: move-arrow-left 0.5s linear infinite;
 }
 .sideNav button img {
   height: 20px;
@@ -532,6 +750,20 @@ header {
 }
 header .headerContent {
   width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 header .headerContent img {
   -o-object-fit: cover;
@@ -907,14 +1139,14 @@ html {
   position: relative;
 }
 .contact .wrapper .contactSection .leftSection #email {
-  -webkit-transition: color 0.25s ease-in;
-  transition: color 0.25s ease-in;
+  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
   padding-bottom: 5px;
-  border-bottom: solid 2px transparent;
+  border-bottom: solid 2px rgba(255, 255, 255, 0);
 }
 .contact .wrapper .contactSection .leftSection #email:hover {
   color: #ffff;
-  border-bottom: solid 2px #ffff;
+  border-bottom: solid 2px white;
 }
 .contact .wrapper .contactSection .leftSection .socialIcons i {
   position: relative;
@@ -940,27 +1172,6 @@ html {
   -webkit-transform: scale(3);
           transform: scale(3);
   background-color: #ffff;
-}
-.contact .wrapper .contactSection .leftSection .socialIcons .fa-instagram {
-  -webkit-transition: all 0.25s ease-in;
-  transition: all 0.25s ease-in;
-}
-.contact .wrapper .contactSection .leftSection .socialIcons .fa-instagram:hover {
-  color: #ce39db;
-}
-.contact .wrapper .contactSection .leftSection .socialIcons .fa-linkedin {
-  -webkit-transition: all 0.25s ease-in;
-  transition: all 0.25s ease-in;
-}
-.contact .wrapper .contactSection .leftSection .socialIcons .fa-linkedin:hover {
-  color: #0e76a8;
-}
-.contact .wrapper .contactSection .leftSection .socialIcons .fa-github {
-  -webkit-transition: all 0.25s ease-in;
-  transition: all 0.25s ease-in;
-}
-.contact .wrapper .contactSection .leftSection .socialIcons .fa-github:hover {
-  color: #0F0F0F;
 }
 .contact .wrapper .contactSection .contactForm {
   width: calc(50% - 20px);
