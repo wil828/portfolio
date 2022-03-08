@@ -375,6 +375,10 @@ p.nav {
 p.aboutText {
   font-size: 1rem;
 }
+p.footerText {
+  font-size: 0.7rem;
+  color: #f8f9fa;
+}
 
 h1, h2, h3, h4 {
   font-family: "Poppins", sans-serif;
@@ -625,6 +629,8 @@ body {
   z-index: 2000;
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .slideOutNav .slideNavigation {
   display: -webkit-box;
@@ -751,19 +757,7 @@ header {
 header .headerContent {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  position: relative;
 }
 header .headerContent img {
   -o-object-fit: cover;
@@ -886,10 +880,19 @@ html {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
   color: #464646;
 }
 .projects .projectBox .projectTextContainer .skillsAndLinks .usedSkills li {
   width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 35px;
 }
 .projects .projectBox .projectTextContainer .skillsAndLinks .usedSkills li .projectSkills {
   display: -webkit-box;
@@ -900,7 +903,14 @@ html {
           align-items: center;
 }
 .projects .projectBox .projectTextContainer .skillsAndLinks .usedSkills li .projectSkills i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 40px;
+  height: 35px;
 }
 .projects .projectBox .projectTextContainer .skillsAndLinks .links {
   width: 33%;
@@ -1080,6 +1090,9 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .aboutMe .wrapper .aboutContainer .txtContainer {
   width: calc(65% - 20px);
@@ -1094,7 +1107,14 @@ html {
   padding-top: 20px;
 }
 .aboutMe .wrapper .aboutContainer .imgContainer {
+  height: 100%;
   width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .aboutMe .wrapper .aboutContainer .imgContainer img {
   width: 100%;
@@ -1200,6 +1220,14 @@ html {
           flex-direction: column;
 }
 
+footer {
+  background-color: #255ea6;
+  padding: 10px 0;
+}
+footer .footerText {
+  color: #ffff;
+}
+
 .commentInputs {
   width: 100%;
 }
@@ -1264,4 +1292,161 @@ input::placeholder, textarea::placeholder {
   border-style: inset;
   -webkit-box-shadow: 0 0 0 2px #bdbfc0 inset;
           box-shadow: 0 0 0 2px #bdbfc0 inset;
+}
+
+@media (max-width: 970px) {
+  .sideNav {
+    display: none;
+  }
+
+  .projects .projectBox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .projects .projectBox .projectImgContainer {
+    width: 60%;
+    margin-top: 30px;
+  }
+  .projects .projectBox .projectTextContainer {
+    width: 100%;
+  }
+  .projects .projectBox .projectTextContainer h3 {
+    text-align: center;
+  }
+
+  .skills .wrapper .skillsContainer .eachSkill {
+    width: 25%;
+  }
+
+  .aboutMe .wrapper .aboutContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .aboutMe .wrapper .aboutContainer .txtContainer {
+    width: 100%;
+    padding-right: 0px;
+  }
+  .aboutMe .wrapper .aboutContainer .imgContainer {
+    width: 50%;
+    margin-bottom: 50px;
+  }
+
+  .contact .wrapper {
+    padding: 100px 0;
+    max-width: 1000px;
+  }
+  .contact .wrapper .contactSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .wrapper .contactSection .leftSection {
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+  .contact .wrapper .contactSection .contactForm {
+    width: 100%;
+    margin-left: 0px;
+  }
+}
+@media (max-width: 600px) {
+  p.nav {
+    font-size: 1rem;
+  }
+
+  .projects .projectBox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .projects .projectBox .projectImgContainer {
+    width: 60%;
+    margin-top: 30px;
+  }
+  .projects .projectBox .projectTextContainer .skillsAndLinks .usedSkills li {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  p.nav {
+    font-size: 1rem;
+  }
+  p.aboutText {
+    font-size: 0.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  .projects h2:before {
+    position: absolute;
+    width: 143px;
+    height: 20px;
+    top: 120px;
+  }
+
+  .skills .wrapper h2:before {
+    width: 215px;
+    height: 20px;
+    top: 19px;
+    background-color: #8cc6ec;
+    content: "";
+    z-index: -1;
+  }
+  .skills .wrapper .skillsContainer .eachSkill i {
+    font-size: 40px;
+  }
+  .skills .wrapper .skillsContainer .eachSkill i:hover + span {
+    top: 95px;
+  }
+  .skills .wrapper .skillsContainer .eachSkill i:after {
+    top: calc(50% - 8px);
+    left: calc(50% - 8px);
+    width: 16px;
+    height: 16px;
+  }
+  .skills .wrapper .skillsContainer .eachSkill .iconName {
+    top: 80px;
+  }
+
+  .aboutMe .wrapper h2:before {
+    position: absolute;
+    width: 255px;
+    height: 20px;
+    top: 19px;
+  }
+  .aboutMe .wrapper .aboutContainer .imgContainer {
+    width: 70%;
+  }
+
+  .contact .wrapper h2:before {
+    width: 284px;
+    height: 20px;
+    top: 19px;
+    left: -15px;
+    background-color: #8cc6ec;
+    content: "";
+    z-index: -1;
+  }
 }
