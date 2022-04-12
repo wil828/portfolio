@@ -57,5 +57,8 @@ portfolioApp.displayNav = () => {
     
 }
 
+// Create a method for when the element is in the view
+
+
 
 portfolioApp.init();
