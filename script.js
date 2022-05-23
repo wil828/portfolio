@@ -3,6 +3,7 @@ const portfolioApp = {};
 
 portfolioApp.init = () => {
     portfolioApp.eventListenerSetUp();
+    portfolioApp.changeNavColour();
 }
 
 // create a method which sets up all the event listeners within the app
@@ -57,8 +58,38 @@ portfolioApp.displayNav = () => {
     
 }
 
-// Create a method for when the element is in the view
-
-
+// Create a method for when the section is in the view
+portfolioApp.changeNavColour = () => {
+    const sections = [...document.querySelectorAll('section')];
+    const anchorNavList = [...document.querySelectorAll('.colourNav')]
+    const pNavList = [...document.querySelectorAll('.sideNavP')]
+    
+    // adding event Listener to change the color
+    window.addEventListener('scroll', function () {
+    
+        const scrollFromTop = window.pageYOffset
+    
+        for (let i = 0; sections.length > i; i++) {
+    
+            if (scrollFromTop <= (sections[i].offsetTop + sections[i].offsetHeight - 10)) {
+                // console.log(sections[i]);
+                // console.log(anchorNavList[i]);
+                for (let x = 0; anchorNavList.length > x; x++) {
+                    if (i === x) {
+                        anchorNavList[x].classList.add("changeAnchorColour");
+                        pNavList[x].classList.add("changePColour");
+                    } else {
+                        anchorNavList[x].classList.remove("changeAnchorColour");
+                        pNavList[x].classList.remove("changePColour");
+                    }
+                }
+                
+                break
+            }
+    
+        }
+    
+    })
+}
 
 portfolioApp.init();
